@@ -4,7 +4,7 @@ from common.inputfile import InputFile
 def part1(lines):
     elves = getElves(lines)
     elves.sort(key=elfSort, reverse=True)
-    return str(elves[0].calories);
+    return str(elves[0].calories)
 
 def part2(lines) :
     elves = getElves(lines)
@@ -12,12 +12,12 @@ def part2(lines) :
     return str(elves[0].calories + elves[1].calories + elves[2].calories)
 
 def getElves(lines):
-    elf = Elf();
-    elves = [];
+    elf = Elf()
+    elves = []
     for line in lines:
         if (line == ''):
-            elves.append(elf);
-            elf = Elf();
+            elves.append(elf)
+            elf = Elf()
         else:
             elf.add_calories(line);
     return elves
