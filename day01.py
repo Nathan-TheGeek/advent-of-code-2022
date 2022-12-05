@@ -10,7 +10,6 @@ def part2(lines) :
     elves = getElves(lines)
     elves.sort(key=elfSort, reverse=True)
     return str(elves[0].calories + elves[1].calories + elves[2].calories)
-    ## TODO solve part 2 here.
 
 def getElves(lines):
     elf = Elf();
